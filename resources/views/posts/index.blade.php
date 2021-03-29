@@ -30,21 +30,23 @@
             </tr>
           </thead>
           <tbody>
-              @foreach ($posts as $post)
+              @foreach ($posts as $postItem)
                 <tr>
                     <th scope="row">
-                        {{$post->id}}
+                        {{$postItem->id}}
                     </th>
                     <td>
                         {{-- vado a prendere il nome e il cognome dell'autore del post --}}
-                        {{$post->author->name}}
-                        {{$post->author->lastname}}
+                        {{$postItem->author->name}}
+                        {{$postItem->author->lastname}}
                     </td>
                     <td>
-                        {{$post->post_title}}
+                        <a href="{{route('post.show', ['post'=>$postItem->id])}}">
+                            {{$postItem->post_title}}
+                        </a>
                     </td>
                     <td>
-                        {{$post->paragraph}}
+                        {{$postItem->paragraph}}
                     </td>
                 </tr>
               @endforeach
