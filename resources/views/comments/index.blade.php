@@ -9,6 +9,22 @@
               <th scope="col">User- Author of Comment</th>
               <th scope="col">Comment</th>
               <th scope="col">Relative Post</th>
+              <th scope="col">
+                <a href="{{route('author')}}" role="button">
+                    Author
+                </a>
+                </th>
+                <th scope="col">
+                    <a href="{{route('post.index')}}" role="button">
+                        Post
+                    </a>
+                </th>
+                <th scope="col">
+                    <a href="/" role="button">
+                        Home
+                    </a>
+                </th>
+
             </tr>
           </thead>
           <tbody>

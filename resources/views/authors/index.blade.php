@@ -6,17 +6,32 @@
     <table class="table">
         <thead class="thead-dark">
             <tr>
-              <th scope="col">#</th>
-              <th scope="col">Name</th>
-              <th scope="col">Last Name</th>
-              <th scope="col">Mail</th>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Last Name</th>
+                <th scope="col">Mail</th>
 
-              <th scope="col">Photo</th>
-              <th scope="col">Biogrphy</th>
-              <th scope="col">Instagram</th>
-              <th scope="col">Facebook</th>
-              <th scope="col">Twitter</th>
-              <th scope="col">LinkedIn</th>
+                <th scope="col">Photo</th>
+                <th scope="col">Biogrphy</th>
+                <th scope="col">Instagram</th>
+                <th scope="col">Facebook</th>
+                <th scope="col">Twitter</th>
+                <th scope="col">LinkedIn</th>
+                <th scope="col">
+                    <a href="{{route('post.index')}}" role="button">
+                        Post
+                    </a>
+                </th>
+                <th scope="col">
+                    <a href="{{route('comment.index')}}" role="button">
+                        Comment
+                    </a>
+                </th>
+                <th scope="col">
+                    <a href="/" role="button">
+                        Home
+                    </a>
+                </th>
             </tr>
           </thead>
           <tbody>

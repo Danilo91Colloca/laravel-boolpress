@@ -81,7 +81,9 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    <a href="{{route('author')}}">AUTHOR</a>
+                    <a href="{{route('post.index')}}">POSTS</a>
+                    <a href="{{route('comment.index')}}">COMMENTS</a>
                 </div>
 
                 <div class="links">
