@@ -7,10 +7,9 @@
             <div class="card">
                 <div style="margin: 0 auto; text-align:center">
                     <h5>Author Profile Pic</h5>
-                    <div style="width: 100px;">
+                    <div style="width: 200px;">
                         <img class="card-img-top" src="{{$post->author->detail->pic}}" alt="Card image cap" style="width:100%; border-radius: 50%">
                     </div>
-
                 </div>
 
                 <div class="card-body">
@@ -21,4 +20,23 @@
                     <p class="card-text"><small class="text-muted">Last updated: {{$post->updated_at}}</small></p>
                 </div>
             </div>
+
+        </div>
+        <div>
+            @yield('comments')
+        </div>
+        <div >
+            <span>Go to:</span>
+            <br/>
+            <a href="{{route('author')}}" role="button">
+                    Author
+            </a>
+            <a href="{{route('comment.index')}}" role="button">
+                    Comment
+            </a>
+            <a href="/" role="button">
+                    Home
+            </a>
+        </div>
+
 @endsection

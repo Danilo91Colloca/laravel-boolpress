@@ -19,19 +19,24 @@
                 <th scope="col">LinkedIn</th>
                 <th scope="col">
                     <a href="{{route('post.index')}}" role="button">
-                        Post
+                        All Posts
                     </a>
                 </th>
-                <th scope="col">
+
+                 <th scope="col">
                     <a href="{{route('comment.index')}}" role="button">
-                        Comment
+                        All Comment
                     </a>
-                </th>
-                <th scope="col">
+                 </th>
+
+                 <th scope="col">
                     <a href="/" role="button">
                         Home
                     </a>
-                </th>
+                 </th>
+
+
+
             </tr>
           </thead>
           <tbody>
@@ -68,8 +73,14 @@
                     <td>
                         {{$author->detail->linkedin}}
                     </td>
+
                 </tr>
               @endforeach
           </tbody>
     </table>
+    <div>
+        <h5>Go To:</h5>
+
+
+    </div>
 @endsection

@@ -40,7 +40,7 @@
                         {{$comment->comment_text}}
                     </td>
                     <td>
-                        {{$comment->post_id}}
+                       {{$comment->post_id}}
                     </td>
 
                 </tr>
