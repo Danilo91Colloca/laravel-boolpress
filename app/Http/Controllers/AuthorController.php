@@ -11,6 +11,8 @@ class AuthorController extends Controller
 
         $authors=Author::all();
 
+
+
         dd($authors);
 
     }

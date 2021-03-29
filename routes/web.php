@@ -19,3 +19,7 @@ Route::get('/', function () {
 
 
 Route::get('/author', 'AuthorController@index');
+
+Route::resource('/post', PostController::class);
+
+Route::resource('/comment', CommentController::class);
