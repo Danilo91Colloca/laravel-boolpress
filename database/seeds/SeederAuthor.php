@@ -5,6 +5,7 @@ use Faker\Generator as Faker;
 use App\Author;
 use App\DetailsAuthor;
 use App\Post;
+use App\Comment;
 class SeederAuthor extends Seeder
 {
     /**
@@ -36,5 +37,10 @@ class SeederAuthor extends Seeder
         $post->post_title='qui ci sara il titolo post';
         $post->paragraph='qui ci sara blablbalbaldksdjfklajlsdogldfkgjv gdhjkals jadhfg djklsa ldkja s';
         $author->posts()->save($post);
+
+        $comment = new Comment();
+        $comment->name='pippo';
+        $comment->comment_text='fkljdf lkjdsfkl adkls dfoiufoeis klndf aklsdjf ';
+        $post->comments()->save($comment);
     }
 }
