@@ -15,7 +15,6 @@ class SeederAuthor extends Seeder
      */
     public function run(Faker $faker)
     {
-            $faker->addProvider(new WW\Faker\Provider\Picture($faker));
         for($i=0; $i<12; $i++){
             $author = new Author();
             $author->name=$faker->firstName();
@@ -24,12 +23,12 @@ class SeederAuthor extends Seeder
             $author->save();
 
             $details = new DetailsAuthor();
-            $details->pic = 'qui ci saranno i dettagli';
+            $details->pic = 'https://picsum.photos/seed/' . rand(0, 10000) . '/200/300';
             $details->biography = $faker->text();
-            $details->instagram = $faker->url();
-            $details->twitter = $faker->url();
-            $details->facebook = $faker->url();
-            $details->linkedin = $faker->url();
+            $details->instagram = 'https://www.instagram.com';
+            $details->twitter = 'https://www.twitter.com';
+            $details->facebook = 'https://www.facebook.com';
+            $details->linkedin = 'https://www.linkedin.com';
 
             $author->detail()->save($details);
             for($x=0; $x < rand(2, 4); $x++){

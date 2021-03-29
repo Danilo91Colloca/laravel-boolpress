@@ -10,10 +10,6 @@ class AuthorController extends Controller
     {
 
         $authors=Author::all();
-
-
-
-        dd($authors);
-
+        return view('authors.index', compact('authors'));
     }
 }
