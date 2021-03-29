@@ -15,8 +15,18 @@ class CreateDetailsAuthorsTable extends Migration
     {
         Schema::create('details_authors', function (Blueprint $table) {
             $table->id();
-
+            $table->unsignedBigInteger('authors_id');
+            $table->string('pic', 2048);
+            $table->text('biogrphy', 2000);
+            $table->string('instagram', 2048);
+            $table->string('facebook', 2048);
+            $table->string('twitter', 2048);
+            $table->string('linkedin', 2048);
             $table->timestamps();
+
+            $table->foreign('authors_id')
+                ->references('id')
+                ->on('authors');
         });
     }
 
