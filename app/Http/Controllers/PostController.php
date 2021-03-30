@@ -24,7 +24,7 @@ class PostController extends Controller
      */
     public function create()
     {
-        //
+        return view('posts.create');
     }
 
     /**
@@ -35,7 +35,13 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data= $request->all();
+        $newPost= new Post();
+        $newPost->fill($data);
+        $newPost->save();
+
+        $post= Post::orderBr('id', 'desc')->first();
+        return redirect()->route('post.show', $post);
     }
 
     /**
