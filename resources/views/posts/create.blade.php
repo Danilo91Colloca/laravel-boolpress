@@ -24,6 +24,14 @@
                 <label for="paragraph">Post</label>
                 <textarea class="form-control" id="paragraph" name="paragraph" rows="20"></textarea>
             </div>
+            <div class="form-group">
+                <label for="tag-multiselect">Select Tags</label>
+                <select multiple class="form-control" id="tag-multiselect" name="tag_name[]">
+                    @foreach ($tags as $tagCol)
+                        <option value="{{$tagCol->id}}">{{$tagCol->tag_name}}</option>
+                    @endforeach
+                </select>
+              </div>
             <button type="submit" class="btn btn-primary">Store</button>
         </form>
     </div>
