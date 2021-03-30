@@ -78,9 +78,4 @@
               @endforeach
           </tbody>
     </table>
-    <div>
-        <h5>Go To:</h5>
-
-
-    </div>
 @endsection

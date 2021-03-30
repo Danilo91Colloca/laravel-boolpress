@@ -25,14 +25,38 @@
         <div>
             @yield('comments')
         </div>
+        <h3>Comments Section:</h3>
+        @foreach ($post->comments as $itemComment)
+            <div class="card">
+                <div class="card-body">
+                   <h5>Author of Comment:</h5>
+                    {{ $itemComment->name}}
+                    <div >
+                        <br/>
+                        <h5>comment:</h5>
+                        {{ $itemComment->comment_text}}
+                    </div>
+                    <div>
+                        last updated:
+                         {{ $itemComment->updated_at}}
+                     </div>
+
+                </div>
+            </div>
+        @endforeach
+
+
         <div >
             <span>Go to:</span>
             <br/>
             <a href="{{route('author')}}" role="button">
-                    Author
+                   All Author
             </a>
             <a href="{{route('comment.index')}}" role="button">
-                    Comment
+                    All Comment
+            </a>
+            <a href="{{route('post.index')}}" role="button">
+                All Posts
             </a>
             <a href="/" role="button">
                     Home

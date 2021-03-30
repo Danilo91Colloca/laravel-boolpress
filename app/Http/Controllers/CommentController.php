@@ -46,6 +46,8 @@ class CommentController extends Controller
      */
     public function show(Comment $comment)
     {
+        // $selected=Comment::orderBy('id','desc')->where('category_id', 1)->get();
+
         return view('comments.show', compact('comment'));
     }
 
