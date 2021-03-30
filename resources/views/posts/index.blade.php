@@ -13,18 +13,23 @@
               <th scope="col">Post</th>
 
                 <th scope="col">
-                    <a href="{{route('author')}}" role="button">
+                    <a style="font-size: 13px;" href="{{route('author')}}" role="button">
                          Author
                     </a>
                 </th>
                 <th scope="col">
-                    <a href="{{route('comment.index')}}" role="button">
+                    <a style="font-size: 13px;" href="{{route('comment.index')}}" role="button">
                          Comment
                     </a>
                 </th>
                 <th scope="col">
-                    <a href="/" role="button">
+                    <a style="font-size: 13px;" href="/" role="button">
                          Home
+                    </a>
+                </th>
+                <th scope="col">
+                    <a style="font-size: 13px;" href="{{route('post.create')}}" role="button">
+                         NewPost
                     </a>
                 </th>
             </tr>

@@ -18,22 +18,27 @@
                 <th scope="col">Twitter</th>
                 <th scope="col">LinkedIn</th>
                 <th scope="col">
-                    <a href="{{route('post.index')}}" role="button">
-                        All Posts
+                    <a style="font-size: 13px;" href="{{route('post.index')}}" role="button">
+                        Posts
                     </a>
                 </th>
 
                  <th scope="col">
-                    <a href="{{route('comment.index')}}" role="button">
-                        All Comment
+                    <a style="font-size: 13px;" href="{{route('comment.index')}}" role="button">
+                        Comment
                     </a>
                  </th>
 
                  <th scope="col">
-                    <a href="/" role="button">
+                    <a style="font-size: 13px;" href="/" role="button">
                         Home
                     </a>
                  </th>
+                 <th scope="col">
+                    <a style="font-size: 13px;" href="{{route('post.create')}}" role="button">
+                         NewPost
+                    </a>
+                </th>
 
 
 

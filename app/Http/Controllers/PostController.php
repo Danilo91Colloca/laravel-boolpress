@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Post;
+use App\Author;
+
 class PostController extends Controller
 {
     /**
@@ -24,7 +26,8 @@ class PostController extends Controller
      */
     public function create()
     {
-        return view('posts.create');
+        $authors = Author::all();
+        return view('posts.create', compact('authors'));
     }
 
     /**
@@ -39,9 +42,7 @@ class PostController extends Controller
         $newPost= new Post();
         $newPost->fill($data);
         $newPost->save();
-
-        $post= Post::orderBr('id', 'desc')->first();
-        return redirect()->route('post.show', $post);
+        return redirect()->route('post.index');
     }
 
     /**

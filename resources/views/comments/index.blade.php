@@ -24,6 +24,11 @@
                         Home
                     </a>
                 </th>
+                <th scope="col">
+                    <a style="font-size: 13px;" href="{{route('post.create')}}" role="button">
+                         NewPost
+                    </a>
+                </th>
 
             </tr>
           </thead>

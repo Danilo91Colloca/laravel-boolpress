@@ -80,10 +80,11 @@
             @endif
 
             <div class="content">
-                <div class="title m-b-md">
-                    <a href="{{route('author')}}">AUTHOR</a>
-                    <a href="{{route('post.index')}}">POSTS</a>
-                    <a href="{{route('comment.index')}}">COMMENTS</a>
+                <div class="title m-b-md" style="font-size: 40px; ">
+                    <a style="margin-right: 10px" href="{{route('author')}}">AUTHOR</a>
+                    <a style="margin-right: 10px" href="{{route('post.index')}}">POSTS</a>
+                    <a style="margin-right: 10px" href="{{route('comment.index')}}">COMMENTS</a>
+                    <a href="{{route('post.create')}}">CREATE NEW POST</a>
                 </div>
 
                 <div class="links">
