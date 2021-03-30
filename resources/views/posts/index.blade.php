@@ -11,6 +11,7 @@
               <th scope="col">Author of Post</th>
               <th scope="col">Post Title</th>
               <th scope="col">Post</th>
+              <th scope="col">Tags</th>
 
                 <th scope="col">
                     <a style="font-size: 13px;" href="{{route('author')}}" role="button">
@@ -53,6 +54,11 @@
                     <td>
                         {{$postItem->paragraph}}
                     </td>
+                    @foreach ($postItem->tags as $tagName)
+                        <td>
+                            {{$tagName->tag_name}}
+                        </td>
+                    @endforeach
                 </tr>
               @endforeach
           </tbody>

@@ -41,7 +41,7 @@ class PostController extends Controller
     public function store(Request $request)
     {
         $data= $request->all();
-        dd($data);
+
         //*********verifica che l'autore inserito esista******* */
         $author_id=$data['author_id'];
         if(!Author::find($author_id)){
@@ -51,6 +51,10 @@ class PostController extends Controller
         $newPost= new Post();
         $newPost->fill($data);
         $newPost->save();
+
+         //con l'attach aggancio tutti gli id dei tags
+         //si deve posizionare dopo il save() altrimenti prima darà un errore poichè il post prima di questa posizione non esiste
+         $newPost->tags()->attach($data['tag_name']);
         return redirect()->route('post.index');
     }
 
