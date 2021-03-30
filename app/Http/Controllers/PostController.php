@@ -39,6 +39,13 @@ class PostController extends Controller
     public function store(Request $request)
     {
         $data= $request->all();
+
+        //*********verifica che l'autore inserito esista******* */
+        $author_id=$data['author_id'];
+        if(!Author::find($author_id)){
+            dd("l'autore selezionato è inesistente");
+        }
+        //**************** */
         $newPost= new Post();
         $newPost->fill($data);
         $newPost->save();
