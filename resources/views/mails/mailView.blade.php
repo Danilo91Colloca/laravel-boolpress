@@ -14,6 +14,8 @@
     height:100%" >
         <p style="width:95%; padding:10px;">
             In data {{$newPost->updated_at}} è stato creato un nuovo post.
+            <br>
+            L' autore é: {{$newPost->author->name}} {{$newPost->author->lastname}}
             <br/>
             Title: {{$newPost->post_title}}
             <br/>
