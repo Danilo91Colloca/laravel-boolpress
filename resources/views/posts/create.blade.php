@@ -5,7 +5,7 @@
 
 {{-- @dump($authors) --}}
     <div style="padding:25px">
-        <form action="{{route('post.store')}}" method="POST">
+        <form action="{{route('post.store')}}" method="POST" enctype="multipart/form-data">
             @csrf
             @method('POST')
             <div class="form-group">

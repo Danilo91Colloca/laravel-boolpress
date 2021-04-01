@@ -43,8 +43,9 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        $data= $request->all();
 
+        $data= $request->all();
+        $path=$request->file('image')->store('images');
         //*********verifica che l'autore inserito esista******* */
         $author_id=$data['author_id'];
         if(!Author::find($author_id)){
