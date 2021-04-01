@@ -4,7 +4,6 @@
 @section('page-title', 'Posts-Boolpress')
 
 @section('content')
-<img src="{{asset('storage/Q9vEWenkLmK1aGqLcbnVkpuGPo5KZ7SXJLsuViln.jpg')}}" alt="">
     <table class="table">
         <thead class="thead-dark">
             <tr>
@@ -12,6 +11,7 @@
               <th scope="col">Author of Post</th>
               <th scope="col">Post Title</th>
               <th scope="col">Post</th>
+              <th scope="col">Post Image</th>
               <th scope="col">Tags</th>
 
                 <th scope="col">
@@ -54,6 +54,9 @@
                     </td>
                     <td>
                         {{$postItem->paragraph}}
+                    </td>
+                    <td >
+                       <img style="width:150px" src="{{$postItem->image}}"/>
                     </td>
                     @foreach ($postItem->tags as $tagName)
                         <td>

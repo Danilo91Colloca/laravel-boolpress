@@ -54,6 +54,8 @@ class PostController extends Controller
         //**************** */
         $newPost= new Post();
         $newPost->fill($data);
+        //carico il path image nel db
+        $newPost->image=$pathImage;
         $newPost->save();
 
         //da qui la mail di notifica poichè il post è creato e non siamo stati ancora reindirizzati
