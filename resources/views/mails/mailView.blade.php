@@ -12,7 +12,16 @@
     border: 1px solid gray;
     width:80%;
     height:100%" >
-    sono la view della mail
+        <p style="width:95%; padding:10px;">
+            In data {{$newPost->updated_at}} è stato creato un nuovo post.
+            <br/>
+            Title: {{$newPost->post_title}}
+            <br/>
+            <br/>
+            Body:
+            <br/>
+            {{$newPost->paragraph}}
+        </p>
     </div>
 </body>
 </html>

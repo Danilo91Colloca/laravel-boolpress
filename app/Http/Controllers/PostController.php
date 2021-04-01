@@ -18,7 +18,6 @@ class PostController extends Controller
      */
     public function index()
     {
-        Mail::to('habiniy406@ddwfzp.com')->send(new PostCreatedNotify());
 
         $posts= Post::all();
         return view('posts.index', compact('posts'));
@@ -56,9 +55,13 @@ class PostController extends Controller
         $newPost->fill($data);
         $newPost->save();
 
-         //con l'attach aggancio tutti gli id dei tags
-         //si deve posizionare dopo il save() altrimenti prima darà un errore poichè il post prima di questa posizione non esiste
-         $newPost->tags()->attach($data['tag_name']);
+        //da qui la mail di notifica poichè il post è creato e non siamo stati ancora reindirizzati
+        $objectSendInMail= new PostCreatedNotify($newPost);
+        Mail::to('fakemail@fake.com')->send($objectSendInMail);
+
+        //con l'attach aggancio tutti gli id dei tags
+        //si deve posizionare dopo il save() altrimenti prima darà un errore poichè il post prima di questa posizione non esiste
+        $newPost->tags()->attach($data['tag_name']);
         return redirect()->route('post.index');
     }
 
