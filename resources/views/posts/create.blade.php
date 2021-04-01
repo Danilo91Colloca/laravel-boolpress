@@ -25,6 +25,10 @@
                 <textarea class="form-control" id="paragraph" name="paragraph" rows="20"></textarea>
             </div>
             <div class="form-group">
+                <label for="image">Upload Your Image</label>
+                <input type="file" name="image" class="form-control" id="image">
+            </div>
+            <div class="form-group">
                 <label for="tag-multiselect">Select Tags</label>
                 <select multiple class="form-control" id="tag-multiselect" name="tag_name[]">
                     @foreach ($tags as $tagCol)
