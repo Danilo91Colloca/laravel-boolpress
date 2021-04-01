@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 use App\Post;
 use App\Tag;
 use App\Author;
+use App\Mail\PostCreatedNotify;
 
 class PostController extends Controller
 {
@@ -16,6 +18,8 @@ class PostController extends Controller
      */
     public function index()
     {
+        Mail::to('habiniy406@ddwfzp.com')->send(new PostCreatedNotify());
+
         $posts= Post::all();
         return view('posts.index', compact('posts'));
     }
