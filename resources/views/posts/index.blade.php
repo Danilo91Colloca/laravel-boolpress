@@ -4,6 +4,7 @@
 @section('page-title', 'Posts-Boolpress')
 
 @section('content')
+<img src="{{asset('storage/Q9vEWenkLmK1aGqLcbnVkpuGPo5KZ7SXJLsuViln.jpg')}}" alt="">
     <table class="table">
         <thead class="thead-dark">
             <tr>
